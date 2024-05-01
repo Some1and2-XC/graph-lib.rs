@@ -8,6 +8,9 @@ pub trait Shape {
 
     fn get_color(&self) -> Vec<u8>; 
     fn set_color(&mut self) -> Result<(), Box<dyn Error>>; 
+
+    fn get_offset(&self) -> Vec<f64>;
+    fn set_offset(&mut self, offsets: Vec<f64>) -> Result<(), Box<dyn Error>>;
 }
 
 mod circle;
