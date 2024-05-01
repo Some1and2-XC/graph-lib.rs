@@ -8,6 +8,8 @@ pub trait Shape {
 
     fn get_color(&self) -> Vec<u8>;
     fn set_color(&mut self, color: Vec<u8>) -> Result<(), Box<dyn Error>>;
+
+    fn method(&self, x: f64, : f64) -> bool;
 }
 
 mod circle;

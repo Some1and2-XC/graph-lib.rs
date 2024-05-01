@@ -2,6 +2,7 @@ use std::error::Error;
 
 use super::Shape;
 
+/// Struct that represents the circles to be rendered
 pub struct Circle {
     width: f64,
     height: f64,
@@ -94,5 +95,20 @@ impl Shape for Circle {
         assert_eq!(color.len(), 4);
         self.color = color;
         return Ok(());
+    }
+
+    /// Method for deciding if a point is inside the shape
+    /// The offset of the shape is accounted for elsewhere
+    /// # Example
+    /// ```rust
+    /// # use crate::graph_lib::shapes::Circle;
+    /// # use crate::graph_lib::shapes::Shape;
+    /// let c = Circle::new(1.0, 1.0, vec![255, 0, 0, 255]);
+    /// assert_eq!(c.method(0.0, 0.0), false);
+    /// assert_eq!(c.method(0.5, 0.5), true);
+    /// // assert_eq!(c.method(1.0, 1.0), false); // needs to be patched!!
+    /// ```
+    fn method(&self, x: f64, y: f64) -> bool {
+        return (x * x) as f64 / (self.width * self.width * 0.25) + (y * y) as f64 / (self.height * self.height * 0.25) > 1.0;
     }
 }

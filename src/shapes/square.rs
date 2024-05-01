@@ -86,4 +86,7 @@ impl Shape for Square {
         self.color = color;
         return Ok(());
     }
+    fn method(&self, x: f64, y: f64) -> bool {
+        todo!()
+    }
 }
