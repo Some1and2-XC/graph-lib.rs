@@ -1,0 +1,64 @@
+<svg
+    version="1.2"
+    height="100%"
+    width="100%"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <style>
+        rect {
+            stroke: blue;
+            stroke-width: 4px;
+            stroke-dasharray: 5px;
+        }
+
+        .title {
+            font: normal 3rem sans-serif;
+        }
+    </style>
+    <g transform="scale(0.125, 1)">
+        <rect
+            x="0"
+            y="0"
+            height="100%"
+            width="100%"
+            fill="blue"
+        />
+        <g
+            dx="50%"
+            dy="50%"
+        >
+            <text
+                transform="scale(8, 1)"
+                transform-origin="50% 50%"
+                dx="50%"
+                dy="50%"
+                text-anchor="middle"
+                fill="black"
+                class="title"
+            >Chart Title</text>
+        </g>
+    </g>
+    <g transform="scale(0.125, 1)">
+            <rect
+                x="0"
+                y="0"
+                height="100%"
+                width="100%"
+                fill="blue"
+            />
+            <g
+                dx="50%"
+                dy="50%"
+            >
+                <text
+                    transform="scale(8, 1)"
+                    transform-origin="50% 50%"
+                    dx="50%"
+                    dy="50%"
+                    text-anchor="middle"
+                    fill="black"
+                    class="title"
+                >Chart Title</text>
+            </g>
+        </g>
+</svg>
