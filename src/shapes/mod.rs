@@ -9,7 +9,14 @@ pub trait Shape {
     fn get_color(&self) -> Vec<u8>;
     fn set_color(&mut self, color: Vec<u8>) -> Result<(), Box<dyn Error>>;
 
-    fn method(&self, x: f64, : f64) -> bool;
+    fn get_border(&self) -> Vec<f64>;
+    fn set_border(&mut self, border: Vec<f64>) -> Result<(), Box<dyn Error>>;
+
+    fn method(&self, x: f64, y: f64) -> bool;
+}
+
+pub trait Svg {
+    fn get_tag(&self) -> String;
 }
 
 mod circle;

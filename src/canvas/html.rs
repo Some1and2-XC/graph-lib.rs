@@ -1,10 +1,11 @@
 use super::Canvas;
+use super::CanvasItem;
 use super::Shape;
 
 use std::error::Error;
 
 pub struct Html {
-    elements: Vec<Box<dyn Shape>>,
+    elements: Vec<CanvasItem>,
 }
 
 impl Html {
@@ -13,9 +14,8 @@ impl Html {
     }
 }
 
-
 impl Canvas for Html {
-    fn add_element(&mut self, element: Box<dyn Shape>) -> &Self {
+    fn add_element(&mut self, element: CanvasItem) -> &Self {
         self.elements.push(element);
         return self;
     }
